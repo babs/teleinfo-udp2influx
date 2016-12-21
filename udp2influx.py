@@ -54,7 +54,7 @@ def writelines(influxurl, payload, attempts=2):
                         3 - attempts,
                         exc_info=True)
             sleep(1)
-            writelines(payload, attempts - 1)
+            writelines(influxurl, payload, attempts - 1)
 
 def main():
     "Main func."
